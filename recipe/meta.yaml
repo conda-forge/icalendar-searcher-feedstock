@@ -1,5 +1,5 @@
 {% set name = "icalendar-searcher" %}
-{% set version = "1.0.3" %}
+{% set version = "1.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/icalendar_searcher-{{ version }}.tar.gz
-  sha256: fd43f59ad7ceaf7c86b0fe4cdf261097e68b5c16a82c9892241bdcc0abc7a1d0
+  sha256: abd99bf1ac9c9d675d84151101db4883a97e9958755708804c55abd30df58f6c
 
 build:
   noarch: python
@@ -17,8 +17,8 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core
-    - poetry-dynamic-versioning >=1.0.0,<2.0.0
+    - hatchling
+    - hatch-vcs
     - pip
   run:
     - python >={{ python_min }}
