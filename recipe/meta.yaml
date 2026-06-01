@@ -1,5 +1,5 @@
 {% set name = "icalendar-searcher" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/icalendar_searcher-{{ version }}.tar.gz
-  sha256: abd99bf1ac9c9d675d84151101db4883a97e9958755708804c55abd30df58f6c
+  sha256: 2440d4d0d9fbe0021a6647916853744dbca179abd39d25c742ebb8442bbc1bc3
 
 build:
   noarch: python
