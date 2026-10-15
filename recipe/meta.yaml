@@ -17,12 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - hatchling
+    - hatchling >=1.27.0
     - hatch-vcs
+    - setuptools-scm >=9
     - pip
   run:
     - python >={{ python_min }}
-    - icalendar >=6.0
+    - icalendar >=6.2.0
     - recurring-ical-events >=3.8.0
 
 test:
@@ -37,8 +38,10 @@ test:
 about:
   home: https://github.com/python-caldav/icalendar-searcher
   summary: Search, filter and sort iCalendar components
-  license: AGPL-3.0-only
-  license_file: LICENSE.md
+  license: GPL-3.0-or-later OR Apache-2.0
+  license_file:
+    - COPYING.GPL
+    - COPYING.APACHE
 
 extra:
   recipe-maintainers:
