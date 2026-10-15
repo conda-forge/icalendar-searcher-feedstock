@@ -1,13 +1,13 @@
 {% set name = "icalendar-searcher" %}
-{% set version = "1.0.6" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/icalendar_searcher-{{ version }}.tar.gz
-  sha256: 2440d4d0d9fbe0021a6647916853744dbca179abd39d25c742ebb8442bbc1bc3
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/icalendar_searcher-{{ version }}.tar.gz
+  sha256: 14978379670385b837a580c2ee95665b18ae80169a0b7e12abfc503c049c57a9
 
 build:
   noarch: python
@@ -17,12 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - hatchling
+    - hatchling >=1.27.0
     - hatch-vcs
+    - setuptools-scm >=9
     - pip
   run:
     - python >={{ python_min }}
-    - icalendar >=6.0
+    - icalendar >=6.2.0
     - recurring-ical-events >=3.8.0
 
 test:
@@ -37,8 +38,10 @@ test:
 about:
   home: https://github.com/python-caldav/icalendar-searcher
   summary: Search, filter and sort iCalendar components
-  license: AGPL-3.0-only
-  license_file: LICENSE.md
+  license: GPL-3.0-or-later OR Apache-2.0
+  license_file:
+    - COPYING.GPL
+    - COPYING.APACHE
 
 extra:
   recipe-maintainers:
